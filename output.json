@@ -1,0 +1,65 @@
+[
+    [
+        {
+            "name": "Microsoft",
+            "ticker": "MSFT",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l11f3242118ff2add5d117cbf216f29ac578f6ba6.png"
+        }
+    ],
+    [
+        {
+            "name": "NVIDIA",
+            "ticker": "NVDA",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l088472395b2697109252aa04c2f12d53cf051d62.png"
+        }
+    ],
+    [
+        {
+            "name": "Amazon",
+            "ticker": "AMZN",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l74c0fda1054b04bf3e2365d467e32a47e3feba7b.png"
+        }
+    ],
+    [
+        {
+            "name": "Meta Platforms (Facebook)",
+            "ticker": "META",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l0723013335c55d4193228fb0f1f0de4a4526aec0.png"
+        }
+    ],
+    [
+        {
+            "name": "Eli Lilly",
+            "ticker": "LLY",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l7cb887865bc6fe9f7ff92cc98fbb2c2ab2d19749.png"
+        }
+    ],
+    [
+        {
+            "name": "Tesla",
+            "ticker": "TSLA",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/lefd12553d6a4f7e57b3ac4f4927181d7a651d0d6.png"
+        }
+    ],
+    [
+        {
+            "name": "Visa",
+            "ticker": "V",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l8201464a0e80138777b8c32237634ea4180dafcb.png"
+        }
+    ],
+    [
+        {
+            "name": "JPMorgan Chase",
+            "ticker": "JPM",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l99f5e9d88edfc330050f0ebdd37af8909672bb0d.png"
+        }
+    ],
+    [
+        {
+            "name": "UnitedHealth",
+            "ticker": "UNH",
+            "image": "https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l746d7373d990fbe39e7f365057ace7a548d35414.png"
+        }
+    ]
+]

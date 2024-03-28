@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  href="{%static 'logo.png'%}">
+    <title>
+       
+        FinGrow
+    </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'background.jpeg' %}"); /* Path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: black; /* Text color */
+
+
+        }
+        .background-overlay {
+            /* Set semi-transparent white color */
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+            /* Position absolute to cover entire body */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    
+    </style>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img style="width:30px;height:30px" src="{% static 'logo.png'%}">
+            &nbsp
+            <a class="navbar-brand" href="#">FinGrow </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" style="justify-content:center">
+                        <a class="nav-link" href="/login" style="background-color:rgb(121, 220, 144);;color:black;border-radius:8px;padding-left:25px; width:100px;justify-content:center" >LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        
+
+        <form class="d-flex" method='POST'>
+            {% csrf_token %}
+        
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <span class="badge bg-light text-dark">Search By Stock Name or Symbol</span>
+      </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="mb-4" style="color:black">{{header}}</h1>
+                
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl.No</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Ticker Name</th>
+                        <th scope="col">Logo</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                        {% for item in stock_names %}
+                        <tr >
+                        <td style="width : 20px">{{forloop.counter}} </td>
+                        <td><b><a style="text-decoration: none;color:black;" href="/share={{ item.0.ticker}}">{{ item.0.name}}</a></b> </td>
+                        <td style="width : 400px">{{ item.0.ticker }}</td>
+                        <td><img style="width:auto;height:20px"src={{ item.0.image}}>
+                        </tr>
+                        {% endfor %}
+                        
+                     
+                     
+                      
+                    </tbody>
+                  </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
